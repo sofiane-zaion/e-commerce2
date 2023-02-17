@@ -1,0 +1,61 @@
+.card-type.visa {
+    background-color: #fff;
+    border-top: solid #1E3F8E 13px;
+}
+
+.card-type.visa::before {
+    background-color: #1E3F8E;
+    border: solid #fff 4px;
+    border-width: 5px 10px;
+    width: 60px;
+    height: 14px;
+    top: 0;
+}
+
+.card-type.visa::after {
+    width: 100%;
+    height: 13px;
+    background-color: #DF9600;
+    bottom: 0;
+}
+
+.card-type.mastercard {
+    background-color: #1D468F;
+}
+
+.card-type.mastercard::before, .card-type.mastercard::after {
+    width: 22px;
+    height: 22px;
+    border-radius: 14px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.card-type.mastercard::before {
+    background-color: #DB2142;
+    left: 12px;
+}
+
+.card-type.mastercard::after {
+    background-color: #FEC627;
+    right: 12px;
+}
+
+.card-type.amex {
+    background-color: #CAE2C3;
+    border: solid 3px #6F8668;
+    border-bottom: none;
+}
+
+.card-type.amex::before {
+    width: 16px;
+    height: 24px;
+    border-radius: 8px/12px;
+    background-color: #6F8668;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

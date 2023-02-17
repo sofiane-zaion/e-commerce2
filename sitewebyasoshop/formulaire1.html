@@ -1,0 +1,96 @@
+<?php
+print_r($_POST);
+
+require("mailer.php");  // on recupere le fichier php mailer.php
+            
+if(isset($_POST['surname'], $_POST['firstname'],$_POST['email'], $_POST['message'])){
+    mailer($_POST['email'],'test', $_POST['surname']. $_POST['firstname'] .$_POST['message']);
+
+    }
+?>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <div class="img">
+    <img src="https://img.freepik.com/vecteurs-premium/conception-modele-logo-chaussures-modernes_316488-856.jpg?w=740"> 
+    </div>
+    <title>YASO SHOP</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="AccueilSite.css">
+</head>
+        <nav>
+        <h1><span style="color: RED">YASO SHOP</h1></span>
+        <div class="onglets">
+            <a href="AccueilSite.html">Accueil</a>
+            <a href="ChaussuresSite.html">Chaussures</a>
+            <a href="T-shirtsSite.html">T-shirts</a>
+        </div>
+        </nav>
+
+<header>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+</header>
+ <body>
+        
+    
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="col-8 m-4">
+                <form  method="POST">
+                    <div class="form-group">
+                        <div class="text-center">
+                            <h1><span color:black">Formulaire de commande </h1>
+                                <h5>*Information: Pour le paiement de votre commande YASO SHOP, nous acceptons les réglements sur place par espèces pour vous faciliter la vie. Génial,n'est-ce pas!</h5>
+                        </div>
+                        
+                        <br><br>
+                        <div class="d-flex">
+                            <input type="text" name="surname" placeholder="Nom" id="surname_id" class="form-control"/>
+                            <input type="text" name="firstname" placeholder="Prénom" id="firstname_id" class="form-control"/>
+                        </div>
+                        <br/>
+                        <input type="email" name="email" placeholder="Email" id="email_id" class="form-control"/>
+                        <br/>
+                        <textarea id=message rows="10" name="message" placeholder="Insérer le choix de votre commande avec votre taille et la quantité correspondante.Merci." id="messsage_id" class="form-control"></textarea>
+                        <br/>
+                        <button type="submit" id=btn1 class="btn btn-lg btn-primary">Envoi de ma commande</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+<footer>
+
+        <h1>YASO SHOP,le site fait pour vous !</h1>
+        <div class="services">
+            
+            <div class="service">
+                <h3>Livraison gratuite</h3>
+                <p>Pour bénéficiez d'une livraison express à votre domicile,merci de nous envoyez un mail avec vos coordonées ainsi que votre adresse postale.</p>
+            </div>
+
+            <div class="service">
+                <h3>Plus d'informations</h3>
+                <p>Pour en savoir plus sur l'achat des vetements sur YASO SHOP, contactez-nous via notre numéro de téléphone ci-dessous</p>
+            </div>
+
+            <div class="service">
+                <h3>Aimé ou remboursé</h3>
+                <p>Pour tout remboursement,merci de nous contactez au numéro de contact ou par mail</p>
+            </div>
+
+        </div>
+        <p id="contact">Contact : 07 66 51 67 19<br> E-mail: sofianezaion@outlook.fr / m.aitallayassine@gmail.com | &copy; 2022, YASO SHOP.</p>
+    </footer>
+</body>
+</html>
